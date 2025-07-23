@@ -1,4 +1,4 @@
-# Algorithmic-Trading-Strategy
+**Algorithmic-Trading-Strategy**
 A momentum + mean reversion trading strategy with risk management and backtesting.
 
 What It Does
@@ -21,10 +21,10 @@ bashpip install pandas numpy yfinance matplotlib seaborn
 Basic Usage
 pythonfrom trading_strategy import TradingStrategy
 
-# Define your stocks
+**Define your stocks**
 stocks = ['AAPL', 'GOOGL', 'MSFT', 'TSLA', 'NVDA']
 
-# Run strategy
+**Run strategy**
 strategy = TradingStrategy(
     symbols=stocks,
     start_date="2020-01-01", 
@@ -36,7 +36,7 @@ strategy.get_data()
 strategy.make_signals() 
 strategy.backtest()
 
-# See results
+**See results**
 print(strategy.report())
 strategy.plot_results()
 How It Works
@@ -69,7 +69,7 @@ pythonstrategy = TradingStrategy(
     txn_cost=0.001        # 10 bps transaction cost
 )
 
-# Strategy parameters
+**Strategy parameters**
 strategy.mom_window = 126     # momentum lookback (6 months)
 strategy.mr_window = 20       # mean reversion lookback  
 strategy.max_dd = 0.15        # max drawdown before stopping
@@ -104,7 +104,7 @@ High volatility: Markets overreact, mean reversion works
 
 The strategy automatically detects the regime using rolling volatility percentiles and adjusts the signal weighting accordingly.
 
-**#Limitations**
+**Limitations**
 Assumes you can trade at closing prices
 No market impact costs for large orders
 Performance depends heavily on the stock universe
