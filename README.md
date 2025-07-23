@@ -104,7 +104,7 @@ High volatility: Markets overreact, mean reversion works
 
 The strategy automatically detects the regime using rolling volatility percentiles and adjusts the signal weighting accordingly.
 
-Limitations
+#Limitations
 Assumes you can trade at closing prices
 No market impact costs for large orders
 Performance depends heavily on the stock universe
